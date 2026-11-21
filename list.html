@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Browse gigs | SiswaGigs</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body data-page="gigs/list">
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="top">
+    <div class="bar"><a class="brand" href="../index.html">SiswaGigs</a>
+      <button class="menu-toggle" type="button" aria-label="Navigation menu" aria-expanded="false" aria-controls="menu-panel" hidden><span aria-hidden="true"></span></button><div class="menu-panel" id="menu-panel">
+        <div class="menu-inner">
+          <nav id="main-nav" class="main" aria-label="Main"><a href="../dashboard/student.html">Dashboard</a><a
+              href="../gigs/list.html" aria-current="page">Browse gigs</a><a href="../gigs/create.html">Post a gig</a><a
+              href="../applications/my-applications.html">My applications</a><a href="../applications/my-jobs.html">My
+              jobs</a><a href="../worklog/log.html">Work log</a><a href="../wages/summary.html">Wages</a></nav>
+          <div class="who" id="account-nav"><a class="profile-link" href="../auth/profile.html" aria-label="My profile"
+              data-photo=""><span class="profile-avatar" aria-hidden="true">A</span><span
+                class="profile-name"><span>Akmal</span></span></a>
+            <form action="../index.html" method="get"><button class="btn sm" type="submit">Log out</button></form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+
+    <h1>Browse gigs</h1>
+    <p class="lead">Find student gigs that match your skills.</p>
+    <form class="row" role="search" onsubmit="return false" style="margin-bottom:1rem">
+      <div style="flex:1;min-width:220px"><label for="q" class="help">Search gigs</label><input id="q" type="search"
+          placeholder="e.g. poster, report" data-q data-filter="#list" data-empty="#none"></div>
+      <div style="min-width:180px"><label for="cat" class="help">Category</label><select id="cat" data-sel
+          data-filter="#list" data-empty="#none">
+          <option value="">All categories</option>
+          <option>Design</option>
+          <option>Presentation</option>
+          <option>Video Editing</option>
+          <option>Writing</option>
+          <option>Tutoring</option>
+        </select></div>
+    </form>
+    <p class="help" aria-live="polite"><span id="count">4</span> gigs shown</p>
+
+
+    <div id="list"></div>
+    <div class="empty" id="none"><b>No gigs match your search.</b>
+      <p>Try a different keyword or choose All categories.</p>
+    </div>
+  </main>
+  <footer class="foot">SiswaGigs &middot; Student gig marketplace for UiTM &middot; Prototype with dummy data</footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="dlg" aria-labelledby="dialog-title">
+    <h2 id="dialog-title">Confirm action</h2>
+    <p></p>
+    <div class="row"><button class="btn alt no" type="button">Cancel</button><button class="btn yes"
+        type="button">Confirm</button></div>
+  </dialog>
+  <script src="../assets/js/sample-data.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+
+</html>
