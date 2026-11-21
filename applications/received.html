@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Applications received | SiswaGigs</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body data-page="applications/received">
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="top">
+    <div class="bar"><a class="brand" href="../index.html">SiswaGigs</a>
+      <button class="menu-toggle" type="button" aria-label="Navigation menu" aria-expanded="false" aria-controls="menu-panel" hidden><span aria-hidden="true"></span></button><div class="menu-panel" id="menu-panel">
+        <div class="menu-inner">
+          <nav id="main-nav" class="main" aria-label="Main"><a href="../dashboard/student.html">Dashboard</a><a
+              href="../gigs/list.html">Browse gigs</a><a href="../gigs/create.html">Post a gig</a><a
+              href="../applications/my-applications.html">My applications</a><a href="../applications/my-jobs.html"
+              aria-current="page">My jobs</a><a href="../worklog/log.html">Work log</a><a
+              href="../wages/summary.html">Wages</a></nav>
+          <div class="who" id="account-nav"><a class="profile-link" href="../auth/profile.html" aria-label="My profile"
+              data-photo=""><span class="profile-avatar" aria-hidden="true">A</span><span
+                class="profile-name"><span>Akmal</span></span></a>
+            <form action="../index.html" method="get"><button class="btn sm" type="submit">Log out</button></form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+
+    <h1>Applications received</h1>
+    <p class="lead">Review and decide on students who applied for your gigs.</p>
+    <div style="max-width:380px;margin-bottom:1rem"><label for="g" class="help">Gig</label><select id="g">
+        <option>Design Event Poster for UiTM Club</option>
+        <option>Create Slide Presentation (10-15 slides)</option>
+        <option>Video Editing for Campus Event</option>
+        <option>Create Infographic for Research Project</option>
+      </select></div>
+
+    <div class="tw">
+      <table class="mobile-records" role="table">
+        <caption>Applicants for the selected gig</caption>
+        <thead>
+          <tr>
+            <th scope="col">Applicant</th>
+            <th scope="col">Cover letter</th>
+            <th scope="col">Applied on</th>
+            <th scope="col">Status</th>
+            <th scope="col">Decision</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+  <footer class="foot">SiswaGigs &middot; Student gig marketplace for UiTM &middot; Prototype with dummy data</footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="dlg" aria-labelledby="dialog-title">
+    <h2 id="dialog-title">Confirm action</h2>
+    <p></p>
+    <div class="row"><button class="btn alt no" type="button">Cancel</button><button class="btn yes"
+        type="button">Confirm</button></div>
+  </dialog>
+  <script src="../assets/js/sample-data.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+
+</html>
