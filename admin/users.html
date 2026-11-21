@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User management | SiswaGigs</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body data-page="admin/users">
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="top">
+    <div class="bar"><a class="brand" href="../index.html">SiswaGigs</a>
+      <button class="menu-toggle" type="button" aria-label="Navigation menu" aria-expanded="false" aria-controls="menu-panel" hidden><span aria-hidden="true"></span></button><div class="menu-panel" id="menu-panel">
+        <div class="menu-inner">
+          <nav id="main-nav" class="main" aria-label="Main"><a href="../admin/dashboard.html">Dashboard</a><a
+              href="../admin/users.html" aria-current="page">Users</a><a href="../admin/gigs.html">Gigs</a></nav>
+          <div class="who" id="account-nav"><a class="profile-link" href="../auth/profile.html" aria-label="My profile"
+              data-photo=""><span class="profile-avatar" aria-hidden="true">AD</span><span
+                class="profile-name">Admin</span></a>
+            <form action="../index.html" method="get"><button class="btn sm" type="submit">Log out</button></form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+
+    <h1>User management</h1>
+    <p class="lead">Manage UiTM student accounts.</p>
+    <div style="max-width:380px;margin-bottom:1rem"><label for="q" class="help">Search by name or email</label><input
+        id="q" type="search" data-q data-filter="#ul" data-empty="#none"></div>
+
+    <div class="tw">
+      <table class="mobile-records" role="table">
+        <caption>All users</caption>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Role</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody id="ul"></tbody>
+      </table>
+    </div>
+    <div class="empty" id="none">No users found.</div>
+  </main>
+  <footer class="foot">SiswaGigs &middot; Student gig marketplace for UiTM &middot; Prototype with dummy data</footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="dlg" aria-labelledby="dialog-title">
+    <h2 id="dialog-title">Confirm action</h2>
+    <p></p>
+    <div class="row"><button class="btn alt no" type="button">Cancel</button><button class="btn yes"
+        type="button">Confirm</button></div>
+  </dialog>
+  <script src="../assets/js/sample-data.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+
+</html>

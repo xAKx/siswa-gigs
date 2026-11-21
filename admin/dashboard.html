@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin dashboard | SiswaGigs</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body data-page="admin/dashboard">
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="top">
+    <div class="bar"><a class="brand" href="../index.html">SiswaGigs</a>
+      <button class="menu-toggle" type="button" aria-label="Navigation menu" aria-expanded="false" aria-controls="menu-panel" hidden><span aria-hidden="true"></span></button><div class="menu-panel" id="menu-panel">
+        <div class="menu-inner">
+          <nav id="main-nav" class="main" aria-label="Main"><a href="../admin/dashboard.html"
+              aria-current="page">Dashboard</a><a href="../admin/users.html">Users</a><a
+              href="../admin/gigs.html">Gigs</a></nav>
+          <div class="who" id="account-nav"><a class="profile-link" href="../auth/profile.html" aria-label="My profile"
+              data-photo=""><span class="profile-avatar" aria-hidden="true">AD</span><span
+                class="profile-name">Admin</span></a>
+            <form action="../index.html" method="get"><button class="btn sm" type="submit">Log out</button></form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+
+    <h1>Admin dashboard</h1>
+    <p class="lead">Platform overview.</p>
+    <div class="grid g4">
+      <div class="card stat"><b>&ndash;</b><span>Total users</span></div>
+      <div class="card stat"><b>&ndash;</b><span>Total gigs</span></div>
+      <div class="card stat"><b>&ndash;</b><span>Applications</span></div>
+      <div class="card stat"><b>&ndash;</b><span>Active gigs</span></div>
+    </div>
+
+    <div class="row" style="margin-top:1rem"><a class="btn" href="users.html">Manage users</a><a class="btn alt"
+        href="gigs.html">Manage gigs</a></div>
+  </main>
+  <footer class="foot">SiswaGigs &middot; Student gig marketplace for UiTM &middot; Prototype with dummy data</footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="dlg" aria-labelledby="dialog-title">
+    <h2 id="dialog-title">Confirm action</h2>
+    <p></p>
+    <div class="row"><button class="btn alt no" type="button">Cancel</button><button class="btn yes"
+        type="button">Confirm</button></div>
+  </dialog>
+  <script src="../assets/js/sample-data.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+
+</html>
