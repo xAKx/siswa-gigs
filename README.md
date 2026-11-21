@@ -1,5 +1,7 @@
 # SiswaGigs
 
+[Open the SiswaGigs storyboard](https://xakx.github.io/siswa-gigs/)
+
 SiswaGigs is our group project for UiTM students to find and apply for small paid jobs. Students can also post a gig when they need help with things like posters, presentations, or video editing.
 
 This version is an HTML storyboard. We use sample data to show how the pages and features work. The login, applications, and payments are hardcode since no database are integrated.
