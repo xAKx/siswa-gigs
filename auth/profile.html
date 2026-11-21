@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My profile | SiswaGigs</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body data-page="auth/profile">
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="top">
+    <div class="bar"><a class="brand" href="../index.html">SiswaGigs</a>
+      <button class="menu-toggle" type="button" aria-label="Navigation menu" aria-expanded="false" aria-controls="menu-panel" hidden><span aria-hidden="true"></span></button><div class="menu-panel" id="menu-panel">
+        <div class="menu-inner">
+          <nav id="main-nav" class="main" aria-label="Main"><a href="../dashboard/student.html">Dashboard</a><a
+              href="../gigs/list.html">Browse gigs</a><a href="../gigs/create.html">Post a gig</a><a
+              href="../applications/my-applications.html">My applications</a><a href="../applications/my-jobs.html">My
+              jobs</a><a href="../worklog/log.html">Work log</a><a href="../wages/summary.html">Wages</a></nav>
+          <div class="who" id="account-nav"><a class="profile-link" href="../auth/profile.html" aria-current="page"
+              aria-label="My profile"><span class="profile-avatar" aria-hidden="true">A</span><span
+                class="profile-name"><span>Akmal</span></span></a>
+            <form action="../index.html" method="get"><button class="btn sm" type="submit">Log out</button></form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+
+    <h1>My profile</h1>
+    <p class="lead">Edit the sample profile to preview how your details appear.</p>
+    <div class="grid profile-layout">
+      <section class="card profile-summary" aria-labelledby="profile-name">
+        <div class="avatar" aria-hidden="true">A</div>
+        <div class="profile-identity">
+          <h2 id="profile-name" data-db="USER.full_name">Akmal Hakim bin Razak</h2>
+          <p class="help" id="profile-contact">akmal@student.uitm.edu.my &middot; 010-000-0001</p>
+        </div>
+        <div class="profile-skills">
+          <h3>My skills</h3>
+          <div id="profile-skills"><span class="chip">Poster design</span> <span class="chip">Canva</span>
+            <span class="chip">Presentation</span></div>
+        </div>
+      </section>
+      <div class="card profile-editor">
+        <h2>Edit profile</h2>
+
+        <noscript><p class="alert info">Enable JavaScript to try editing the profile.</p></noscript>
+        <form id="profile-form" data-demo="Profile preview updated." method="post">
+          <div class="f"><label for="name" class="req">Full name</label><input id="name" name="full_name" type="text"
+              value="Akmal Hakim bin Razak" required maxlength="100" autocomplete="name"
+              aria-describedby="name-error"><span class="err" id="name-error">Enter your full name.</span>
+          </div>
+          <div class="f"><label for="email" class="req">UiTM email</label><input id="email" name="email" type="email"
+              value="akmal@student.uitm.edu.my" required maxlength="100" autocomplete="email"
+              aria-describedby="email-error"><span class="err" id="email-error">Enter a valid UiTM email address.</span>
+          </div>
+          <div class="f"><label for="phone_number">Phone number</label><input id="phone_number" name="phone_number"
+              type="tel" value="010-000-0001" maxlength="20" autocomplete="tel"></div>
+          <div class="f"><label for="skills">Skills</label><input id="skills" aria-describedby="skills-h" name="skills"
+              type="text" value="Poster design, Canva, Presentation"><span class="help" id="skills-h">Separate skills
+              with commas.</span></div>
+          <div class="row profile-actions"><button class="btn" type="submit" disabled>Save changes</button><a class="btn alt"
+              href="../dashboard/student.html">Cancel</a></div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer class="foot">SiswaGigs &middot; Student gig marketplace for UiTM &middot; Prototype with dummy data</footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create an account | SiswaGigs</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body data-page="auth/register">
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="top">
+    <div class="bar"><a class="brand" href="../index.html">SiswaGigs</a>
+      <nav id="main-nav" class="main" aria-label="Main"><a href="../index.html">Home</a><a
+          href="../gigs/list.html">Browse gigs</a></nav>
+      <div class="who" id="account-nav"><a class="btn sm alt" href="../auth/login.html">Log in</a><a class="btn sm alt"
+          href="../auth/register.html">Register</a></div>
+    </div>
+  </header>
+  <main id="main">
+
+
+    <div class="center card" style="max-width:600px">
+      <h1>Create an account</h1>
+      <p class="lead">Try registration with sample details. Fields marked * are required.</p>
+      <noscript><p class="alert info">Enable JavaScript to try the registration form.</p></noscript>
+      <form data-demo="Demo registration complete. Opening login..." data-next="login.html" method="post">
+        <div class="two">
+          <div class="f"><label for="name" class="req">Full name</label><input id="name" name="full_name" type="text"
+              required maxlength="100" autocomplete="name" aria-describedby="name-error"><span class="err"
+              id="name-error">Enter your full name.</span>
+          </div>
+          <div class="f"><label for="phone_number">Phone number</label><input id="phone_number" name="phone_number"
+              type="tel" maxlength="20" autocomplete="tel"></div>
+        </div>
+        <div class="f"><label for="email" class="req">UiTM email</label><input id="email" name="email" type="email"
+            required maxlength="100" autocomplete="email" aria-describedby="email-error"><span class="err"
+            id="email-error">Enter a valid UiTM email address.</span></div>
+        <div class="two">
+          <div class="f"><label for="role" class="req">I want to</label><select id="role" name="role" required
+              aria-describedby="role-error">
+              <option value="student">Find gigs (student)</option>
+              <option value="employer">Post gigs (employer)</option>
+            </select><span class="err" id="role-error">Please choose an option.</span></div>
+        </div>
+        <div class="two">
+          <div class="f"><label for="password" class="req">Password</label>
+            <div class="pw"><input id="password" name="password" type="password" required minlength="8"
+                autocomplete="new-password" aria-describedby="password-error"><button type="button" data-pw="password"
+                aria-label="Show password" aria-pressed="false">Show</button></div><span class="help">At least 8
+              characters.</span><span class="err" id="password-error">Use at least 8 characters.</span>
+          </div>
+          <div class="f"><label for="confirm" class="req">Confirm password</label>
+            <div class="pw"><input id="confirm" name="confirm" type="password" required autocomplete="new-password"
+                aria-describedby="confirm-error"><button type="button" data-pw="confirm"
+                aria-label="Show password confirmation" aria-pressed="false">Show</button></div><span class="err"
+              id="confirm-error">Re-enter the same password.</span>
+          </div>
+        </div>
+        <button class="btn" type="submit" style="width:100%" disabled>Register</button>
+      </form>
+
+      <p class="help">Already have an account? <a href="login.html">Log in here</a></p>
+    </div>
+  </main>
+  <footer class="foot">SiswaGigs &middot; Student gig marketplace for UiTM &middot; Prototype with dummy data</footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="auth.js"></script>
+</body>
+
+</html>
