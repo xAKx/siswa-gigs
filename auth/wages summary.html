@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wages | SiswaGigs</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-page="wages/summary">
+<a class="skip" href="#main">Skip to main content</a>
+<header class="top"><div class="bar"><a class="brand" href="../index.html">SiswaGigs</a><button class="menu-toggle" type="button" aria-label="Navigation menu" aria-expanded="false" aria-controls="menu-panel" hidden><span aria-hidden="true"></span></button><div class="menu-panel" id="menu-panel"><div class="menu-inner"><nav id="main-nav" class="main" aria-label="Main"><a href="../dashboard/student.html">Dashboard</a><a href="../gigs/list.html">Browse gigs</a><a href="../gigs/create.html">Post a gig</a><a href="../applications/my-applications.html">My applications</a><a href="../applications/my-jobs.html">My jobs</a><a href="../worklog/log.html">Work log</a><a href="../wages/summary.html" aria-current="page">Wages</a></nav><div class="who" id="account-nav"><a class="profile-link" href="../auth/profile.html" aria-label="My profile" data-photo=""><span class="profile-avatar" aria-hidden="true">A</span><span class="profile-name"><span>Akmal</span></span></a><form action="../index.html" method="get"><button class="btn sm" type="submit">Log out</button></form></div></div></div></div></header>
+<main id="main">
+
+
+<h1>Wages</h1><p class="lead">See what you earned and what the platform fee (10%) was.</p>
+<div class="grid g4"><div class="card stat"><b>&ndash;</b><span>Total hours</span></div><div class="card stat"><b>&ndash;</b><span>Gross pay</span></div><div class="card stat"><b>&ndash;</b><span>Platform fee</span></div><div class="card stat"><b>&ndash;</b><span>Net pay (you receive)</span></div></div><div class="grid g2" aria-label="Payment status summary">
+  <div class="card stat"><b id="paid-total">RM0.00</b><span>Paid to you</span></div>
+  <div class="card stat"><b id="pending-total">RM0.00</b><span>Awaiting payment</span></div>
+</div>
+<p class="lead">Gross = hours × hourly rate. Platform fee = 10% of gross. Net = gross − fee. Totals include both paid and pending entries.</p>
+<div class="row sp"><h2>Breakdown</h2><label for="payment-filter">Payment status: <select id="payment-filter"><option value="All">All</option><option value="Paid">Paid</option><option value="Pending">Pending</option></select></label></div>
+<p id="entry-count" aria-live="polite"></p>
+
+<div class="tw"><table class="mobile-records" role="table"><caption>Wage entries</caption><thead><tr><th scope="col">Job</th><th scope="col" class="n">Hours</th><th scope="col">Rate</th><th scope="col" class="n">Gross</th><th scope="col" class="n">Fee</th><th scope="col" class="n">Net</th><th scope="col">Payment</th><th scope="col">Paid on</th></tr></thead><tbody></tbody></table></div>
+</main>
+<footer class="foot">SiswaGigs &middot; Student gig marketplace for UiTM &middot; Prototype with dummy data</footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<dialog id="dlg" aria-labelledby="dialog-title">
+  <h2 id="dialog-title">Confirm action</h2>
+  <p></p>
+  <div class="row"><button class="btn alt no" type="button">Cancel</button><button class="btn yes" type="button">Confirm</button></div>
+</dialog>
+<script src="../assets/js/sample-data.js"></script>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>
